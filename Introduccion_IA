@@ -16,7 +16,7 @@ while True:
     #Se detectan las plagas de diferentes medidas en cualquier parte del video
     autos = car_cascade.detectMultiScale(video_gris, 1.1, 1)
     for (x,y,w,h) in autos:
-        #Se  dibujan los rectangulos alrededor de los autos en formato rgb
+        #Se  dibujan los rectangulos alrededor de las plagas en formato rgb
          cv2.rectangle(frame,(x,y),(x+w,y+h),(0,255,0),2)
          cv2.imshow("video",frame)
     #Se despliga ventana en pantalla y se cierra presionando Q o automaticamente al finalizar el video
